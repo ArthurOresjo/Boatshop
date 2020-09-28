@@ -1,0 +1,50 @@
+
+db.boats.insertOne({model:'Maxi 95', model_year:1976, price: 225000, sail:'yes' , motor:'yes', image:'api/assets'})
+
+db.boats.insertOne({model:'Colvic', model_year:1988, price: 275000, sail:'yes' , motor:'yes', image:'api/assets'})
+
+db.boats.insertOne({model:'Bruce Roberts', model_year:2012, price: 2680000, sail:'yes' , motor:'yes', image:'api/assets'})
+
+db.boats.insertOne({model:'Etap 32', model_year:2005, price: 535000, sail:'yes' , motor:'yes', image:'api/assets'})
+
+db.boats.insertOne({model:'Triss Magnum', model_year:1991, price: 19900, sail:'yes' , motor:'no', image:'api/assets'})
+
+db.boats.insertOne({model:'Nordkapp Avant', model_year:2011, price: 729000, sail:'no' , motor:'yes', image:'api/assets'})
+
+db.boats.insertOne({model:'Uttern D70', model_year:2017, price: 629000, sail:'no' , motor:'yes', image:'api/assets'})
+
+db.boats.insertOne({model:'Kawasaki', model_year:2020, price: 138900, sail:'no' , motor:'yes', image:'api/assets'})
+
+db.boats.insertOne({model:'Finnmaster', model_year:2003, price: 329000, sail:'no' , motor:'yes', image:'api/assets'})
+
+db.boats.insertOne({model:'Focchi', model_year:2019, price: 475000, sail:'no' , motor:'yes', image:'api/assets'})
+
+
+
+db.boats.aggregate(
+[ { $match : { author : "ryds" } } ]
+
+
+db.boats.aggregate([ { $match : { model : "wasa" } } ]);
+
+db.boats.find( { $text: { $search: "wasa" } } )
+
+db.boats.find({model: /w/})
+
+//filter
+{ $regex: /m.*line/, $options: 'si' } } )
+{ $lt: [ <expression1>, <expression2> ] }
+
+); { "item.name": { $eq: "ab" } } )
+$lt:allt under
+$gt: allt över
+
+get boat:http://localhost:1337/api/boat?id=
+delete:http://localhost:1337/api/delete?id=
+
+
+search word:http://localhost:1337/api/search?word=
+search maxprice:http://localhost:1337/api/search?maxprice=
+search madeafter:http://localhost:1337/api/search?madeafter=
+search madebefore:http://localhost:1337/api/search?madeafter=
+search with order:http://localhost:1337/api/search?maxprice=500000&order=lowprice var korrekt använde felsökväg hela tiden.....
